@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <!-- Thank you state start -->
+  <main class="container">
+    <div class="main">
+      <div class="illustration-thank-you">
+        <img src="/images/illustration-thank-you.svg" alt="">
+      </div>
+
+      <div id="textContainer">
+      </div>
+      <h1>
+        Thank you!
+      </h1>
+
+      <h5>
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </h5>
+    </div>
+  </main>
+  <!-- Thank you state end -->
+</body>
+<script>
+  const textToDisplay = localStorage.getItem('textToDisplay');
+
+  const textContainer = document.getElementById('textContainer');
+  textContainer.textContent = textToDisplay;
+  textContainer.classList.toggle('submitted-rating');
+</script>
+</html>
